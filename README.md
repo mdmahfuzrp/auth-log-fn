@@ -1,5 +1,7 @@
 # 🚀 Dashboard
 
+**Experience the dashboard live:** **[View the demo here](https://auth-log-fn.vercel.app)**
+
 A modern **role-based dashboard application** built with React, Redux Toolkit, TailwindCSS, and Material UI.  
 The project includes authentication and dashboards for **Admin, Merchant, and Members** with different access levels.
 
@@ -41,24 +43,22 @@ npm start
 
 ---
 
-## 🔑 Demo Credentials
-
+```
+🔑 Demo Credentials
 You can log in using the following test accounts:
 
-### 👨‍💼 Admin
-
+👨‍💼 Admin
 Email: admin@finobytes.com
 Password: admin123
 
-### 🏪 Merchant
-
+🏪 Merchant
 Email: store@finobytes.com
 Password: merchant123
 
-### 👤 Member
-
+👤 Member
 Email: member1@finobytes.com
 Password: member123
+```
 
 ---
 
@@ -67,19 +67,61 @@ Password: member123
 ## 📂 Project Structure
 
 ```bash
-├── public/ # Static assets
-├── src/ # Source code
-│ ├── assets/ # Images, icons, etc.
-│ ├── components/ # Reusable UI components
-│ ├── features/ # Redux slices / feature modules
-│ ├── pages/ # Page components
-│ ├── hooks/ # Custom hooks
-│ ├── utils/ # Helper functions
-│ ├── App.js # Root app component
-│ ├── main.js # App entry point
-├── .gitignore
+react-admin-dashboard-public/
+│
+├── public/                  # Public assets
+│   ├── _redirects           # Netlify redirects
+│   ├── index.html
+│   └── robots.txt
+│
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Auth/            # Login & authentication components
+│   │   ├── Card/            # Card UI components
+│   │   ├── Cards/           # Multiple card views
+│   │   ├── CustomerReview/  # Review section
+│   │   ├── MainDash/        # Main dashboard components
+│   │   ├── RigtSide/        # Right-side widgets
+│   │   ├── Table/           # Table UI
+│   │   └── Updates/         # Updates/notifications
+│   │
+│   ├── Data/                # Local data & mock JSON
+│   │   ├── Data.js
+│   │   └── fakeData.json
+│   │
+│   ├── features/            # Redux Toolkit slices & auth
+│   │   └── auth/
+│   │       ├── authSlice.js
+│   │       ├── dashboardSlice.js
+│   │       ├── ProtectedRoute.js
+│   │       ├── PublicRoute.js
+│   │       └── store.js
+│   │
+│   ├── layouts/             # Page layouts
+│   │   ├── DashboardLayout.jsx
+│   │   └── LoginLayout.jsx
+│   │
+│   ├── lib/                 # Helper libraries
+│   │   ├── fakeApi.js
+│   │   └── fn.js
+│   │
+│   ├── pages/               # Pages for each role
+│   │   └── dashboard/
+│   │       ├── AdminDashboard.jsx
+│   │       ├── AdminLogin.jsx
+│   │       ├── MemberDashboard.jsx
+│   │       ├── MemberLogin.jsx
+│   │       ├── MerchantDashboard.jsx
+│   │       └── MerchantLogin.jsx
+│   │
+│   ├── App.js               # Root app component
+│   ├── App.css
+│   ├── index.js             # Entry point
+│   └── store.js             # Redux store setup
+│
 ├── package.json
 ├── README.md
+└── .gitignore
 ```
 
 ### 📜 Summary
@@ -90,8 +132,8 @@ Animations are integrated using Framer Motion, while AJV ensures schema validati
 
 It demonstrates a role-based dashboard system with different access levels for:
 
+```
 ### Admin → Manage users & system logs
-
 ### Merchant → Manage orders, customers, and notifications
-
 ### Member → Track points, rewards, and transactions
+```
