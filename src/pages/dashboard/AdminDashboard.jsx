@@ -35,11 +35,10 @@ const AdminDashboard = () => {
         gutterBottom
         sx={{
           fontWeight: "bold",
-          color: "#1976d2", // stylish blue
+          color: "#e57482ff", // stylish blue
           letterSpacing: 1.2,
           textTransform: "uppercase",
           textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
-          mb: 3, // margin bottom
         }}
       >
         Admin Dashboard

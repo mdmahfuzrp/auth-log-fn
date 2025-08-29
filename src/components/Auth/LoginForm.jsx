@@ -25,6 +25,9 @@ const LoginForm = ({ role }) => {
   });
   const [error, setError] = useState("");
 
+  // Get the demo credentials for the current role
+  const demoUser = fakeData.users.find((u) => u.role === role);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -36,7 +39,6 @@ const LoginForm = ({ role }) => {
     e.preventDefault();
     setError("");
 
-    // Filter users by role
     const user = fakeData.users.find(
       (u) =>
         (u.email === formData.emailOrPhone ||
@@ -54,7 +56,6 @@ const LoginForm = ({ role }) => {
       return;
     }
 
-    // Dispatch login
     dispatch(
       login({
         token: user.token,
@@ -63,7 +64,6 @@ const LoginForm = ({ role }) => {
       })
     );
 
-    // Redirect to dashboard
     navigate(`/dashboard/${user.role}`);
   };
 
@@ -151,6 +151,52 @@ const LoginForm = ({ role }) => {
             Login
           </Button>
         </Box>
+
+        {/* Demo credentials section */}
+        {demoUser && (
+          <Box
+            mt={4}
+            p={3}
+            sx={{
+              borderRadius: 3,
+              background: "linear-gradient(135deg, #ffe0e5, #fff5f6)",
+              boxShadow: "0 4px 12px rgba(229, 116, 130, 0.25)",
+              textAlign: "left",
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              color="#e57482"
+              gutterBottom
+            >
+              🔑 Demo Credentials
+            </Typography>
+            <Box
+              display="flex"
+              flexDirection="column"
+              gap={1}
+              fontSize="0.95rem"
+              color="text.primary"
+            >
+              <Typography>
+                <strong>Email:</strong> {demoUser.email || demoUser.phone}
+              </Typography>
+              <Typography>
+                <strong>Password:</strong> {demoUser.password}
+              </Typography>
+            </Box>
+            <Typography
+              variant="caption"
+              display="block"
+              mt={2}
+              color="text.secondary"
+              fontStyle="italic"
+            >
+              (Use these credentials to explore the {role} panel)
+            </Typography>
+          </Box>
+        )}
       </Paper>
     </Box>
   );
