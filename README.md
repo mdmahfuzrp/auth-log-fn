@@ -66,63 +66,21 @@ Password: member123
 
 ## 📂 Project Structure
 
-The project follows a modular folder structure for scalability:
-
-react-admin-dashboard-public/
-│
-├── public/ # Public assets
-│ ├── \_redirects # Netlify redirects
-│ ├── index.html
-│ └── robots.txt
-│
-├── src/
+```bash
+├── public/ # Static assets
+├── src/ # Source code
+│ ├── assets/ # Images, icons, etc.
 │ ├── components/ # Reusable UI components
-│ │ ├── Auth/ # Login & authentication components
-│ │ ├── Card/ # Card UI components
-│ │ ├── Cards/ # Multiple card views
-│ │ ├── CustomerReview/ # Review section
-│ │ ├── MainDash/ # Main dashboard components
-│ │ ├── RigtSide/ # Right-side widgets
-│ │ ├── Table/ # Table UI
-│ │ └── Updates/ # Updates/notifications
-│ │
-│ ├── Data/ # Local data & mock JSON
-│ │ ├── Data.js
-│ │ └── fakeData.json
-│ │
-│ ├── features/ # Redux Toolkit slices & auth
-│ │ └── auth/
-│ │ ├── authSlice.js
-│ │ ├── dashboardSlice.js
-│ │ ├── ProtectedRoute.js
-│ │ ├── PublicRoute.js
-│ │ └── store.js
-│ │
-│ ├── layouts/ # Page layouts
-│ │ ├── DashboardLayout.jsx
-│ │ └── LoginLayout.jsx
-│ │
-│ ├── lib/ # Helper libraries
-│ │ ├── fakeApi.js
-│ │ └── fn.js
-│ │
-│ ├── pages/ # Pages for each role
-│ │ └── dashboard/
-│ │ ├── AdminDashboard.jsx
-│ │ ├── AdminLogin.jsx
-│ │ ├── MemberDashboard.jsx
-│ │ ├── MemberLogin.jsx
-│ │ ├── MerchantDashboard.jsx
-│ │ └── MerchantLogin.jsx
-│ │
+│ ├── features/ # Redux slices / feature modules
+│ ├── pages/ # Page components
+│ ├── hooks/ # Custom hooks
+│ ├── utils/ # Helper functions
 │ ├── App.js # Root app component
-│ ├── App.css
-│ ├── index.js # Entry point
-│ └── store.js # Redux store setup
-│
+│ ├── main.js # App entry point
+├── .gitignore
 ├── package.json
 ├── README.md
-└── .gitignore
+```
 
 ### 📜 Summary
 
