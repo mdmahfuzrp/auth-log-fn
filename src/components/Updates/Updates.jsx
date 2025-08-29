@@ -5,6 +5,7 @@ import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
 import img1 from "../../imgs/img1.png"; // Default avatar if needed
 import img2 from "../../imgs/img2.png"; // Default avatar if needed
 import img3 from "../../imgs/img3.png"; // Default avatar if needed
+import "./Updates.css";
 
 const Updates = () => {
   const user = useSelector(selectUser);
@@ -22,14 +23,20 @@ const Updates = () => {
 
   return (
     <div className="Updates">
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          mt: 4,
+        }}
+      >
         <Card
           sx={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "start",
             p: 2,
             boxShadow: 3,
-            width: 400,
           }}
         >
           <CardMedia
@@ -39,7 +46,7 @@ const Updates = () => {
             sx={{ width: 80, height: 80, borderRadius: "50%", mr: 2 }}
           />
           <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography variant="h6">
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               {user.name || user.storeName || user.email}
             </Typography>
             <Typography variant="body2" color="text.secondary">
