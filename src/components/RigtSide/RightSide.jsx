@@ -7,7 +7,7 @@ const RightSide = () => {
   return (
     <div className="RightSide">
       <div>
-        <h3>Updates</h3>
+        <h3>User Details</h3>
         <Updates />
       </div>
       <div>
