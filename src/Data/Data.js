@@ -97,7 +97,7 @@ export const cardsData = [
 // Admin dashboard data
 export const adminCardsData = [
   {
-    title: "Total Users",
+    title: "Users",
     color: {
       backGround: "linear-gradient(180deg, #4e54c8 0%, #8f94fb 100%)",
       boxShadow: "0px 10px 20px 0px #d1d2ff",
@@ -107,13 +107,13 @@ export const adminCardsData = [
     png: UilUsersAlt, // Replace with relevant MUI icon or custom icon
     series: [
       {
-        name: "Total Users",
+        name: "Users",
         data: [1000, 1200, 1100, 1300, 1400, 1500, 1600],
       },
     ],
   },
   {
-    title: "Active Merchants",
+    title: "Merchants",
     color: {
       backGround: "linear-gradient(180deg, #ff6a88 0%, #ff99ac 100%)",
       boxShadow: "0px 10px 20px 0px #ffccd5",
@@ -123,13 +123,13 @@ export const adminCardsData = [
     png: UilUsersAlt,
     series: [
       {
-        name: "Active Merchants",
+        name: "Merchants",
         data: [200, 250, 220, 300, 280, 320, 350],
       },
     ],
   },
   {
-    title: "Pending Approvals",
+    title: "Approvals",
     color: {
       backGround: "linear-gradient(180deg, #fbc2eb 0%, #a6c1ee 100%)",
       boxShadow: "0px 10px 20px 0px #e2c7f5",
@@ -139,7 +139,7 @@ export const adminCardsData = [
     png: UilUsersAlt,
     series: [
       {
-        name: "Pending Approvals",
+        name: "Approvals",
         data: [10, 15, 12, 20, 18, 25, 30],
       },
     ],
