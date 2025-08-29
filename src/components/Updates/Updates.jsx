@@ -28,7 +28,6 @@ const Updates = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          mt: 4,
         }}
       >
         <Card
@@ -37,13 +36,14 @@ const Updates = () => {
             alignItems: "start",
             p: 2,
             boxShadow: 3,
+            flexDirection: "column",
           }}
         >
           <CardMedia
             component="img"
             image={roleImages[user.role] || img1}
             alt={user.role}
-            sx={{ width: 80, height: 80, borderRadius: "50%", mr: 2 }}
+            sx={{ width: 80, height: 80, borderRadius: "50%" }}
           />
           <CardContent sx={{ flex: "1 0 auto" }}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
