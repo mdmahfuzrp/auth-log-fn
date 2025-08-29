@@ -33,11 +33,11 @@ export const SidebarData = [
   },
   {
     icon: UilPackage,
-    heading: 'Products'
+    heading: "Products",
   },
   {
     icon: UilChart,
-    heading: 'Analytics'
+    heading: "Analytics",
   },
 ];
 
@@ -89,6 +89,111 @@ export const cardsData = [
       {
         name: "Expenses",
         data: [10, 25, 15, 30, 12, 15, 20],
+      },
+    ],
+  },
+];
+
+// Admin dashboard data
+export const adminCardsData = [
+  {
+    title: "Total Users",
+    color: {
+      backGround: "linear-gradient(180deg, #4e54c8 0%, #8f94fb 100%)",
+      boxShadow: "0px 10px 20px 0px #d1d2ff",
+    },
+    barValue: 75,
+    value: "12,340",
+    png: UilUsersAlt, // Replace with relevant MUI icon or custom icon
+    series: [
+      {
+        name: "Total Users",
+        data: [1000, 1200, 1100, 1300, 1400, 1500, 1600],
+      },
+    ],
+  },
+  {
+    title: "Active Merchants",
+    color: {
+      backGround: "linear-gradient(180deg, #ff6a88 0%, #ff99ac 100%)",
+      boxShadow: "0px 10px 20px 0px #ffccd5",
+    },
+    barValue: 60,
+    value: "2,450",
+    png: UilUsersAlt,
+    series: [
+      {
+        name: "Active Merchants",
+        data: [200, 250, 220, 300, 280, 320, 350],
+      },
+    ],
+  },
+  {
+    title: "Pending Approvals",
+    color: {
+      backGround: "linear-gradient(180deg, #fbc2eb 0%, #a6c1ee 100%)",
+      boxShadow: "0px 10px 20px 0px #e2c7f5",
+    },
+    barValue: 40,
+    value: "120",
+    png: UilUsersAlt,
+    series: [
+      {
+        name: "Pending Approvals",
+        data: [10, 15, 12, 20, 18, 25, 30],
+      },
+    ],
+  },
+];
+
+// Merchant dashboard data
+export const merchantCardsData = [
+  {
+    title: "Sales",
+    color: {
+      backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
+      boxShadow: "0px 10px 20px 0px #e0c6f5",
+    },
+    barValue: 70,
+    value: "18,500",
+    png: UilUsdSquare,
+    series: [
+      {
+        name: "Sales",
+        data: [1000, 1500, 1200, 1800, 1600, 2000, 2100],
+      },
+    ],
+  },
+  {
+    title: "Revenue",
+    color: {
+      backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
+      boxShadow: "0px 10px 20px 0px #FDC0C7",
+    },
+    barValue: 65,
+    value: "11,300",
+    png: UilUsdSquare,
+    series: [
+      {
+        name: "Revenue",
+        data: [800, 1200, 1000, 1500, 1300, 1700, 1600],
+      },
+    ],
+  },
+  {
+    title: "Orders",
+    color: {
+      backGround:
+        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
+      boxShadow: "0px 10px 20px 0px #F9D59B",
+    },
+    barValue: 50,
+    value: "320",
+    png: UilUsdSquare,
+    series: [
+      {
+        name: "Orders",
+        data: [30, 40, 35, 50, 45, 55, 60],
       },
     ],
   },

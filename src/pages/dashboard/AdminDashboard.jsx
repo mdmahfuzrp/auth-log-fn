@@ -14,6 +14,7 @@ import {
 import { selectUser } from "../../features/auth/authSlice";
 import { loadAdminData } from "../../features/auth/dashboardSlice";
 import Cards from "../../components/Cards/Cards";
+import { adminCardsData } from "../../Data/Data";
 
 const AdminDashboard = () => {
   const user = useSelector(selectUser);
@@ -46,10 +47,12 @@ const AdminDashboard = () => {
         Admin Dashboard
       </Typography>
 
-      <Cards />
+      <Cards cardsData={adminCardsData} />
 
       {/* Managed Users Table */}
-      <Typography variant="h6">Managed Users</Typography>
+      <Typography variant="h6" sx={{ mt: 3 }}>
+        Managed Users
+      </Typography>
       <TableContainer component={Paper} sx={{ mb: 3 }}>
         <Table>
           <TableHead>

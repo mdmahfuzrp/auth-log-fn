@@ -34,8 +34,6 @@ const Updates = () => {
           sx={{
             display: "flex",
             alignItems: "start",
-            p: 2,
-            boxShadow: 3,
             flexDirection: "column",
           }}
         >
@@ -45,7 +43,7 @@ const Updates = () => {
             alt={user.role}
             sx={{ width: 80, height: 80, borderRadius: "50%" }}
           />
-          <CardContent sx={{ flex: "1 0 auto" }}>
+          <CardContent sx={{ flex: "1 0 auto", p: 0 }} p={2}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               {user.name || user.storeName || user.email}
             </Typography>
@@ -57,9 +55,6 @@ const Updates = () => {
                 Email: {user.email}
               </Typography>
             )}
-            <Typography variant="body2" color="text.secondary">
-              Last Login: {new Date(user.profile?.lastLogin).toLocaleString()}
-            </Typography>
           </CardContent>
         </Card>
       </Box>

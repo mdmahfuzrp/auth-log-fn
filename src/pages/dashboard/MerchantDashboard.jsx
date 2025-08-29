@@ -18,6 +18,8 @@ import {
 } from "@mui/material";
 import { selectUser } from "../../features/auth/authSlice";
 import { loadMerchantData } from "../../features/auth/dashboardSlice";
+import Cards from "../../components/Cards/Cards";
+import { merchantCardsData } from "../../Data/Data";
 
 const MerchantDashboard = () => {
   const user = useSelector(selectUser);
@@ -44,12 +46,18 @@ const MerchantDashboard = () => {
           letterSpacing: 1.2,
           textTransform: "uppercase",
           textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+          marginTop: "10px",
         }}
       >
         Merchant Dashboard
       </Typography>
       {/* Purchases Table */}
-      <Typography variant="h6">Purchases</Typography>
+      <Cards cardsData={merchantCardsData} />
+
+      {/* Purchase Table */}
+      <Typography variant="h6" sx={{ mt: 3 }}>
+        Purchases
+      </Typography>
       <TableContainer component={Paper} sx={{ mb: 3 }}>
         <Table>
           <TableHead>
