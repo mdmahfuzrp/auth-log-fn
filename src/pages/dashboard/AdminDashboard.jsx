@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { selectUser } from "../../features/auth/authSlice";
 import { loadAdminData } from "../../features/auth/dashboardSlice";
+import Cards from "../../components/Cards/Cards";
 
 const AdminDashboard = () => {
   const user = useSelector(selectUser);
@@ -39,10 +40,13 @@ const AdminDashboard = () => {
           letterSpacing: 1.2,
           textTransform: "uppercase",
           textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+          marginTop: "10px",
         }}
       >
         Admin Dashboard
       </Typography>
+
+      <Cards />
 
       {/* Managed Users Table */}
       <Typography variant="h6">Managed Users</Typography>
