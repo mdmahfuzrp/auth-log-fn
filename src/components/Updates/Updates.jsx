@@ -28,13 +28,16 @@ const Updates = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          p: 0,
         }}
       >
         <Card
           sx={{
             display: "flex",
             alignItems: "start",
+            boxShadow: 3,
             flexDirection: "column",
+            padding: "10px",
           }}
         >
           <CardMedia
@@ -43,7 +46,7 @@ const Updates = () => {
             alt={user.role}
             sx={{ width: 80, height: 80, borderRadius: "50%" }}
           />
-          <CardContent sx={{ flex: "1 0 auto", p: 0 }} p={2}>
+          <CardContent sx={{ flex: "1 0 auto" }}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               {user.name || user.storeName || user.email}
             </Typography>
