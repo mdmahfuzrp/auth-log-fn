@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# 🚀 Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **role-based dashboard application** built with React, Redux Toolkit, TailwindCSS, and Material UI.  
+The project includes authentication and dashboards for **Admin, Merchant, and Members** with different access levels.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📦 Tech Stack
 
-### `yarn start`
+- ⚛️ **React 18** – Component-based UI
+- 🎨 **TailwindCSS + Material UI (MUI)** – Styling & responsive design
+- 🎬 **Framer Motion** – Smooth animations
+- 📊 **ApexCharts + Circular Progressbar** – Interactive charts & data visualization
+- 🔗 **React Router v7** – Role-based routing
+- 🗂️ **Redux Toolkit** – State management
+- ✅ **AJV** – JSON schema validation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Getting Started
 
-### `yarn test`
+Follow these steps to run the project locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/mdmahfuzrp/auth-log-fn.git
 
-### `yarn build`
+# 2️⃣ Move into project directory
+cd auth-log-fn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 3️⃣ Install dependencies
+npm install
+# or (if you face peer dependency issues)
+npm install --legacy-peer-deps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 4️⃣ Start the development server
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔑 Demo Credentials
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can log in using the following test accounts:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 👨‍💼 Admin
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Email: admin@finobytes.com
+Password: admin123
 
-## Learn More
+### 🏪 Merchant
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Email: store@finobytes.com
+Password: merchant123
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 👤 Member
 
-### Code Splitting
+Email: member1@finobytes.com
+Password: member123
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📂 Project Structure
 
-### Making a Progressive Web App
+The project follows a modular folder structure for scalability:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+react-admin-dashboard-public/
+│
+├── public/ # Public assets
+│ ├── \_redirects # Netlify redirects
+│ ├── index.html
+│ └── robots.txt
+│
+├── src/
+│ ├── components/ # Reusable UI components
+│ │ ├── Auth/ # Login & authentication components
+│ │ ├── Card/ # Card UI components
+│ │ ├── Cards/ # Multiple card views
+│ │ ├── CustomerReview/ # Review section
+│ │ ├── MainDash/ # Main dashboard components
+│ │ ├── RigtSide/ # Right-side widgets
+│ │ ├── Table/ # Table UI
+│ │ └── Updates/ # Updates/notifications
+│ │
+│ ├── Data/ # Local data & mock JSON
+│ │ ├── Data.js
+│ │ └── fakeData.json
+│ │
+│ ├── features/ # Redux Toolkit slices & auth
+│ │ └── auth/
+│ │ ├── authSlice.js
+│ │ ├── dashboardSlice.js
+│ │ ├── ProtectedRoute.js
+│ │ ├── PublicRoute.js
+│ │ └── store.js
+│ │
+│ ├── layouts/ # Page layouts
+│ │ ├── DashboardLayout.jsx
+│ │ └── LoginLayout.jsx
+│ │
+│ ├── lib/ # Helper libraries
+│ │ ├── fakeApi.js
+│ │ └── fn.js
+│ │
+│ ├── pages/ # Pages for each role
+│ │ └── dashboard/
+│ │ ├── AdminDashboard.jsx
+│ │ ├── AdminLogin.jsx
+│ │ ├── MemberDashboard.jsx
+│ │ ├── MemberLogin.jsx
+│ │ ├── MerchantDashboard.jsx
+│ │ └── MerchantLogin.jsx
+│ │
+│ ├── App.js # Root app component
+│ ├── App.css
+│ ├── index.js # Entry point
+│ └── store.js # Redux store setup
+│
+├── package.json
+├── README.md
+└── .gitignore
 
-### Advanced Configuration
+### 📜 Summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is built using React 18 with Redux Toolkit for state management and React Router v7 for navigation.
+The UI is powered by Material UI and TailwindCSS, with ApexCharts and Circular Progressbar for analytics.
+Animations are integrated using Framer Motion, while AJV ensures schema validation.
 
-### Deployment
+It demonstrates a role-based dashboard system with different access levels for:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Admin → Manage users & system logs
 
-### `yarn build` fails to minify
+### Merchant → Manage orders, customers, and notifications
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Member → Track points, rewards, and transactions
