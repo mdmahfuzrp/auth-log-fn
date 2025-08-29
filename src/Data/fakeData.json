@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": "admin-001",
+      "role": "admin",
+      "email": "admin@finobytes.com",
+      "password": "admin123",
+      "token": "admin-token-001",
+      "name": "Super Admin",
+      "createdAt": "2025-01-10T12:00:00Z",
+      "profile": {
+        "position": "System Administrator",
+        "lastLogin": "2025-08-28T09:00:00Z"
+      }
+    },
+    {
+      "id": "merchant-101",
+      "role": "merchant",
+      "email": "store@finobytes.com",
+      "password": "merchant123",
+      "token": "merchant-token-101",
+      "storeName": "Finobytes Electronics",
+      "createdAt": "2025-02-12T10:00:00Z",
+      "profile": {
+        "owner": "John Merchant",
+        "lastLogin": "2025-08-27T16:30:00Z"
+      }
+    },
+    {
+      "id": "member-501",
+      "role": "member",
+      "email": "member1@finobytes.com",
+      "phone": "+8801711000001",
+      "password": "member123",
+      "token": "member-token-501",
+      "name": "Alice Member",
+      "createdAt": "2025-04-15T14:30:00Z",
+      "profile": {
+        "points": 250,
+        "lastLogin": "2025-08-28T13:15:00Z"
+      }
+    }
+  ],
+
+  "adminData": {
+    "admin-001": {
+      "managedUsers": [
+        {
+          "id": "merchant-101",
+          "role": "merchant",
+          "email": "store@finobytes.com",
+          "status": "active"
+        },
+        {
+          "id": "member-501",
+          "role": "member",
+          "email": "member1@finobytes.com",
+          "status": "active"
+        }
+      ],
+      "systemLogs": [
+        {
+          "id": 1,
+          "action": "Merchant Approved",
+          "timestamp": "2025-08-25T10:30:00Z"
+        },
+        {
+          "id": 2,
+          "action": "Member Banned",
+          "timestamp": "2025-08-20T12:10:00Z"
+        }
+      ]
+    }
+  },
+
+  "merchantData": {
+    "merchant-101": {
+      "purchases": [
+        {
+          "id": "order-9001",
+          "customer": "Alice Member",
+          "amount": 120,
+          "status": "pending"
+        },
+        {
+          "id": "order-9002",
+          "customer": "Bob Member",
+          "amount": 75,
+          "status": "approved"
+        }
+      ],
+      "customers": [
+        { "id": "member-501", "name": "Alice Member", "points": 250 },
+        { "id": "member-502", "name": "Bob Member", "points": 180 }
+      ],
+      "contributionRate": 10,
+      "notifications": [
+        {
+          "id": 1,
+          "message": "Approval Request for Order-9001",
+          "status": "unread"
+        },
+        { "id": 2, "message": "Contribution Rate Updated", "status": "read" }
+      ]
+    }
+  },
+
+  "memberData": {
+    "member-501": {
+      "pointsSummary": {
+        "totalPoints": 250,
+        "earned": 300,
+        "redeemed": 50
+      },
+      "transactions": [
+        {
+          "id": "txn-3001",
+          "merchant": "Finobytes Electronics",
+          "pointsUsed": 50,
+          "timestamp": "2025-08-20T15:00:00Z"
+        },
+        {
+          "id": "txn-3002",
+          "merchant": "Finobytes Electronics",
+          "pointsEarned": 100,
+          "timestamp": "2025-08-10T14:00:00Z"
+        }
+      ]
+    }
+  }
+}
